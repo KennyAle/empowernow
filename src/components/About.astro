@@ -1,0 +1,186 @@
+<section class="about">
+  <div class="container">
+    <div class="text-content">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        Empoderamos a individuos y organizaciones a través de estrategias
+        innovadoras y un enfoque transformacional.
+      </p>
+      <div class="cards">
+        <div class="card card-1">
+          <h3><i class="fas fa-check-circle"></i> Misión</h3>
+          <p>
+            Impulsamos el crecimiento personal y organizacional con pasión y
+            compromiso.
+          </p>
+        </div>
+        <div class="card card-2">
+          <h3><i class="fas fa-check-circle"></i> Visión</h3>
+          <p>Ser el motor de cambio para un futuro más consciente y exitoso.</p>
+        </div>
+        <div class="card card-3">
+          <h3><i class="fas fa-check-circle"></i> Valores</h3>
+          <p>Innovación, bienestar y liderazgo para un mundo mejor.</p>
+        </div>
+        <div class="card card-4">
+          <h3><i class="fas fa-check-circle"></i> Valores</h3>
+          <p>Innovación, bienestar y liderazgo para un mundo mejor.</p>
+        </div>
+      </div>
+    </div>
+    <div class="image-content">
+      <img src="../src/images/image2.jpg" alt="EmpowerNow Team" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ffffff, #f3f3f3);
+  }
+
+  .about .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  .about .text-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+  }
+
+  .about p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 30px;
+  }
+
+  /* .cards {
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+  } */
+
+  .cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    background-color: rgba(255, 121, 32, 0.04);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    /* min-height: 220px; */
+    justify-content: space-between;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+    position: relative;
+    margin-bottom: 12px;
+  }
+
+  .card h3 i {
+    color: #ff6600;
+  }
+
+  .card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-grow: 1;
+    text-wrap: balance;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+  }
+
+  .about .image-content {
+    text-align: center;
+    flex: 1;
+    max-width: 45%;
+  }
+
+  .about .image-content img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition:
+      box-shadow 0.3s ease;
+  }
+
+  .about .image-content img:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 720px) {
+    .about .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about .text-content {
+      max-width: 100%;
+    }
+
+    .cards {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      width: 100%;
+      padding: 15px;
+      min-height: auto;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+    }
+
+    .about h2 {
+      font-size: 1.5rem;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      padding: 0 20px;
+    }
+  }
+</style>
