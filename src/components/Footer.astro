@@ -34,7 +34,7 @@
 <style>
   .footer {
     background-color: #f8f8f8;
-    padding: 40px 20px 15px 20px;
+    padding: 50px 30px 10px 30px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -45,7 +45,7 @@
   .footer-left {
     display: flex;
     flex-direction: column;
-    gap: 1.3rem;
+    gap: 1rem;
   }
 
   .footer-left-text {
@@ -57,23 +57,19 @@
   .logo {
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    gap: 10px;
   }
 
   .tagline {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #666;
   }
 
   .email {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: #222;
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
   }
 
   .footer-right {
@@ -93,7 +89,7 @@
   .footer-menu a {
     text-decoration: none;
     color: #333;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: 0.3s;
   }
 
@@ -108,48 +104,31 @@
   }
 
   .contact-info p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #222;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-left: auto;
-  }
-
-  .contact-info img {
-    width: 20px;
-    height: auto;
   }
 
   .footer-bottom {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Ajuste para distribuir los elementos */
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 20px;
-    padding-top: 20px;
-    font-size: 0.9rem;
-    color: #666;
-    position: relative;
+    font-size: 0.8rem;
+    color: #777;
     border-top: 1px solid #ddd;
   }
 
   .social-media {
-    position: absolute;
-    left: 0;
     display: flex;
     gap: 15px;
   }
 
   .social-icon {
-    font-size: 24px;
+    font-size: 20px;
     color: #333;
     transition: 0.18s;
-  }
-
-  .social-icon a{
-    color: #333;
   }
 
   .social-icon:hover {
@@ -158,7 +137,7 @@
 
   .copyright {
     text-align: center;
-    width: 100%;
+    flex: 1;
   }
 
   @media (max-width: 768px) {
@@ -183,9 +162,7 @@
     }
 
     .social-media {
-      position: static;
       justify-content: center;
-      margin-bottom: 10px;
     }
 
     .contact-info {
