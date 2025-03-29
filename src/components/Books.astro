@@ -1,27 +1,39 @@
-<section class="books">
+<section id="books" class="books">
   <h2>Mis Libros</h2>
   <p>Descubre herramientas prácticas para transformar tu vida.</p>
 
   <div class="books-container">
     <div class="book-card">
       <div class="book-image">
-        <img src="https://m.media-amazon.com/images/I/616LoH9O18L._SL1500_.jpg" alt="7 Pasos para Construir tu Sueño">
+        <img
+          src="https://m.media-amazon.com/images/I/616LoH9O18L._SL1500_.jpg"
+          alt="7 Pasos para Construir tu Sueño"
+        />
       </div>
       <div class="book-content">
         <h3>7 Pasos para Construir tu Sueño</h3>
-        <p class="book-intro">Un método práctico para alcanzar tus metas, romper límites y transformar tu mentalidad.</p>
-        <a href="https://www.amazon.com" class="cta">Comprar</a>
+        <p class="book-intro">
+          Un método práctico para alcanzar tus metas, romper límites y
+          transformar tu mentalidad.
+        </p>
+        <a href="https://www.amazon.com/-/es/pasos-para-construir-sue%C3%B1o-coaching/dp/9807804051" target="_blank" class="cta">Comprar</a>
       </div>
     </div>
 
     <div class="book-card">
       <div class="book-image">
-        <img src="https://m.media-amazon.com/images/I/71S6LIstdsL._SL1500_.jpg" alt="El Sendero del Emigrante">
+        <img
+          src="https://m.media-amazon.com/images/I/71S6LIstdsL._SL1500_.jpg"
+          alt="El Sendero del Emigrante"
+        />
       </div>
       <div class="book-content">
         <h3>El Sendero del Emigrante</h3>
-        <p class="book-intro">Una guía emocional y práctica para aquellos que atraviesan la experiencia de la migración, llena de herramientas y testimonios.</p>
-        <a href="https://www.amazon.com" class="cta">Comprar</a>
+        <p class="book-intro">
+          Una guía emocional y práctica para aquellos que atraviesan la
+          experiencia de la migración, llena de herramientas y testimonios.
+        </p>
+        <a href="https://www.amazon.ca/El-sendero-del-emigrante-transformaci%C3%B3n/dp/B0DJ54M3Q6" target="_blank" class="cta">Comprar</a>
       </div>
     </div>
   </div>
@@ -30,37 +42,48 @@
 <style>
   .books {
     text-align: center;
-    padding: 0px 20px;
-    max-width: 900px;
+    padding: 60px 20px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 
   .books h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
     color: #333;
   }
 
-  .books p {
-    font-size: 1rem;
-    margin-bottom: 25px;
+  .books > p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
     color: #555;
   }
 
   .books-container {
     display: flex;
-    gap: 40px;
+    gap: 60px;
+    justify-content: center;
   }
 
   .book-card {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
-    background: #fffaf2;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    background-color: rgba(255, 121, 32, 0.04);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      background-color 0.2s ease;
+  }
+
+  .book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background-color: white;
   }
 
   .book-image {
@@ -70,8 +93,8 @@
   .book-image img {
     width: 100%;
     height: auto;
-    border-radius: 6px;
-    max-width: 200px;
+    border-radius: 8px;
+    max-width: 220px;
     object-fit: cover;
   }
 
@@ -81,26 +104,28 @@
   }
 
   .book-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
     color: #222;
+    font-weight: bold;
   }
 
   .book-intro {
     font-size: 1rem;
     color: #444;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    line-height: 1.6;
   }
 
   .cta {
     display: inline-block;
-    padding: 8px 12px;
+    padding: 10px 20px;
     background-color: #ff6600;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 0.85rem;
+    font-size: 1rem;
     transition: 0.3s ease;
   }
 
@@ -117,7 +142,7 @@
       flex-direction: column;
       width: 100%;
       max-width: 350px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     .book-image img {

@@ -1,14 +1,14 @@
 <nav>
   <h2>EmpowerNow</h2>
   <ul>
-    <li class="nav-li active"><a href="#">Home</a></li>
-    <li class="nav-li"><a href="#services">Services</a></li>
-    <li class="nav-li"><a href="#process">Process</a></li>
-    <li class="nav-li"><a href="#about">About</a></li>
-    <li class="nav-li"><a href="#books">Books</a></li>
+    <li class="nav-li active"><a href="#">Inicio</a></li>
+    <li class="nav-li"><a href="#about">Nosotros</a></li>
+    <li class="nav-li"><a href="#services">Servicios</a></li>
+    <li class="nav-li"><a href="#testimonials">Clientes</a></li>
+    <li class="nav-li"><a href="#books">Libros</a></li>
   </ul>
-  <a href="#" class="header-cta"
-    ><i class="fa-solid fa-phone"></i>Consult with us</a
+  <a href="#contact" class="header-cta"
+    ><i class="fa-solid fa-phone"></i>Agenda tu cita</a
   >
 </nav>
 
@@ -54,9 +54,10 @@
     cursor: pointer;
     white-space: nowrap;
     text-decoration: none;
+    transition: background-color 0.3s ease-out;
   }
 
-  nav ul li.active a{
+  nav ul li.active a {
     background-color: #ff6600;
   }
 
@@ -101,12 +102,14 @@
 
 <script>
   const navLi = document.querySelectorAll(".nav-li");
-  navLi.forEach(item => {
-    item.addEventListener("click", function () {
-      navLi.forEach(itemLi => {
-        itemLi.classList.remove('active')
-        this.classList.add('active')
-      })
+  navLi.forEach((item) => {
+    item.addEventListener("click", function (event) {
+      navLi.forEach((itemLi) => {
+        itemLi.classList.remove("active");
+        // this.classList.add("active");
+      });
+      const target = event.currentTarget as HTMLElement; 
+      target.classList.add("active");
     });
   });
 </script>

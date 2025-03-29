@@ -1,10 +1,213 @@
 <section class="process">
   <h2>Cómo Trabajamos</h2>
   <p>Descubre nuestro enfoque paso a paso para tu transformación.</p>
-  <ul>
-    <li>Diagnóstico inicial</li>
-    <li>Plan de acción personalizado</li>
-    <li>Sesiones y seguimiento</li>
-    <li>Evaluación y ajuste</li>
-  </ul>
+  <div class="timeline">
+    <div class="timeline-step step-1 active">
+      <div class="timeline-content">
+        <h3><span class="step-number">1</span> Diagnóstico inicial</h3>
+        <p>
+          Comenzamos con un análisis detallado para entender tus necesidades y
+          objetivos.
+        </p>
+      </div>
+    </div>
+    <div class="timeline-step step-2">
+      <div class="timeline-content">
+        <h3><span class="step-number">2</span> Plan de acción personalizado</h3>
+        <p>
+          Desarrollamos un plan de acción que se adapte a tus metas y desafíos
+          específicos.
+        </p>
+      </div>
+    </div>
+    <div class="timeline-step step-3">
+      <div class="timeline-content">
+        <h3><span class="step-number">3</span> Sesiones y seguimiento</h3>
+        <p>
+          Realizamos sesiones personalizadas y proporcionamos un seguimiento
+          continuo.
+        </p>
+      </div>
+    </div>
+    <div class="timeline-step step-4">
+      <div class="timeline-content">
+        <h3><span class="step-number">4</span> Evaluación y ajuste</h3>
+        <p>
+          Evaluamos el progreso y hacemos ajustes para asegurar los mejores
+          resultados.
+        </p>
+      </div>
+    </div>
+    <div class="timeline-progress-bar">
+      <div class="timeline-progress"></div>
+    </div>
+  </div>
 </section>
+<style>
+  .process {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+  }
+
+  .process h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .process > p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr auto 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .timeline-step {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    opacity: 0.6;
+    transition:
+      opacity 0.5s ease,
+      background-color 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .timeline-step.active {
+    opacity: 1;
+    /* background-color: #ff6600; */
+    transform: scale(1.026);
+  }
+
+  .timeline-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .step-number {
+    background-color: #ff6600;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+  }
+
+  .timeline-content p {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .timeline-step.step-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .timeline-step.step-2 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .timeline-step.step-3 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .timeline-step.step-4 {
+    grid-column: 4;
+    grid-row: 3;
+  }
+
+  .timeline-progress-bar {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    /* width: 100%; */
+    padding: 30px 30px;
+    position: relative;
+    display: flex;
+  }
+
+  .timeline-progress {
+    width: 190%;
+    height: 8px;
+    background-color: #ff6600;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+  }
+
+  @media (max-width: 768px) {
+    .timeline {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      grid-gap: 30px;
+    }
+
+    .timeline-step {
+      align-items: center;
+    }
+
+    .timeline-progress-bar {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+</style>
+
+<script>
+  const progressBar = document.querySelector(
+    ".timeline-progress"
+  ) as HTMLElement;
+  const steps = document.querySelectorAll(".timeline-step");
+
+  function updateProgressBar() {
+    const timelineSection = document.querySelector(".timeline") as HTMLElement;
+    const timelinePosition = timelineSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight - 100;
+    const timelineHeight = timelineSection.offsetHeight;
+
+    const progress =
+      (windowHeight - timelinePosition) / (timelineHeight + windowHeight);
+
+    const clampedProgress = Math.min(Math.max(progress, 0), 1);
+
+    progressBar.style.width = `${clampedProgress * 145}%`;
+
+    steps.forEach((step, index) => {
+      if (clampedProgress >= index * 0.17) {
+        step.classList.add("active");
+      } else {
+        step.classList.remove("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", updateProgressBar);
+  updateProgressBar();
+</script>

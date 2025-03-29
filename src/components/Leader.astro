@@ -1,4 +1,104 @@
-<section class="leader">
-  <h2>Conoce a Nuestra Líder</h2>
-  <p>Ana Andrea Labrador, con más de 25 años de experiencia en coaching.</p>
+a<section class="leader">
+  <div class="leader-content">
+    <div class="leader-image">
+      <img src="./src/images/profile.jpg" alt="Ana Andrea Labrador" />
+    </div>
+    <div class="leader-text">
+      <h3>Conoce a Nuestra Líder, Ana Andrea Labrador</h3>
+      <p>
+        <strong
+          >Soluciones personalizadas para un crecimiento sostenible.</strong>
+      </p>
+      <p>
+        Soy Ana Andrea Labrador, CEO de EmpowerNow Consulting Services. Mi
+        experiencia de más de 25 años como coach y autora me permite ofrecer un
+        enfoque holístico que combina el desarrollo personal con estrategias de
+        negocio.
+      </p>
+      <p>
+        Como <strong>Professional Certified Coach (CPP)</strong>, te ayudaré a
+        identificar tus fortalezas, superar tus desafíos y alcanzar tu máximo
+        potencial, bien sea a nivel organizacional o personal.
+      </p>
+      <p class="leader-cta">
+        <strong>¡Trabajemos juntos para lograrlo!</strong>
+      </p>
+    </div>
+  </div>
 </section>
+
+<style>
+  .leader {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+  }
+
+  .leader-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+  }
+
+  .leader-image {
+    display: flex;
+    align-items: center;
+  }
+
+  .leader-image img {
+    width: 290px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .leader-text {
+    max-width: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .leader-text h3 {
+    font-size: 1.6rem; 
+    margin: 5px 0 20px 0; 
+    color: #333;
+  }
+
+  .leader-text p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .leader-cta {
+    font-size: 1.1rem;
+    color: #ff6600;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .leader-content {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    .leader-image img {
+      width: 200px;
+      height: auto;
+    }
+
+    .leader-text {
+      text-align: center;
+    }
+  }
+</style>
