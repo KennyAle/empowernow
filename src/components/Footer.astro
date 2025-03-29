@@ -1,3 +1,197 @@
 <footer class="footer">
-  <p>&copy; 2025 EmpowerNow Consulting Services</p>
+  <div class="footer-left">
+    <div class="logo">
+      <span>EmpowerNow</span>
+    </div>
+    <div class="footer-left-text">
+      <p class="tagline">Te ayudamos a crecer</p>
+      <p class="email">empowernow@gmail.com</p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <nav class="footer-menu">
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Testimonios</a>
+      <a href="#">Libros</a>
+      <a href="#">Contacto</a>
+    </nav>
+    <div class="contact-info">
+      <p>
+        <img src="https://placehold.co/20x20" alt="Email Icon" />
+        anaandreacanada@gmail.com
+      </p>
+      <p>
+        <img src="https://placehold.co/20x20" alt="Phone Icon" />
+        +1 236 991 6778
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="social-media">
+      <a href="#"><img src="https://placehold.co/30x30" alt="Facebook" /></a>
+      <a href="#"><img src="https://placehold.co/30x30" alt="Instagram" /></a>
+      <a href="#"><img src="https://placehold.co/30x30" alt="LinkedIn" /></a>
+    </div>
+    <p class="copyright">© 2025 EmpowerNow. Todos los derechos reservados.</p>
+  </div>
 </footer>
+
+<style>
+  .footer {
+    background-color: #f8f8f8;
+    padding: 40px 20px 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+
+  .footer-left-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    gap: 10px;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .email {
+    font-size: 1.1rem;
+    color: #222;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-menu {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+
+  .footer-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+
+  .footer-menu a:hover {
+    color: #ff6600;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  .contact-info img {
+    width: 20px;
+    height: auto;
+  }
+
+  .footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px; 
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+  position: relative;
+  border-top: 1px solid #ddd; 
+}
+
+
+  .social-media {
+    position: absolute;
+    left: 0;
+    display: flex;
+    gap: 15px;
+  }
+
+  .social-media img {
+    width: 24px;
+    height: auto;
+  }
+
+  .copyright {
+    text-align: center;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-left {
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .footer-right {
+      text-align: center;
+    }
+
+    .footer-menu {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .social-media {
+      position: static;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      align-items: center;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+</style>

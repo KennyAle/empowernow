@@ -1,8 +1,131 @@
 <section class="books">
   <h2>Mis Libros</h2>
-  <p>
-    Explora mis publicaciones y accede a recursos que potenciarán tu
-    crecimiento.
-  </p>
-  <a href="https://www.amazon.com" class="cta">Adquirir</a>
+  <p>Descubre herramientas prácticas para transformar tu vida.</p>
+
+  <div class="books-container">
+    <div class="book-card">
+      <div class="book-image">
+        <img src="https://m.media-amazon.com/images/I/616LoH9O18L._SL1500_.jpg" alt="7 Pasos para Construir tu Sueño">
+      </div>
+      <div class="book-content">
+        <h3>7 Pasos para Construir tu Sueño</h3>
+        <p class="book-intro">Un método práctico para alcanzar tus metas, romper límites y transformar tu mentalidad.</p>
+        <a href="https://www.amazon.com" class="cta">Comprar</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <div class="book-image">
+        <img src="https://m.media-amazon.com/images/I/71S6LIstdsL._SL1500_.jpg" alt="El Sendero del Emigrante">
+      </div>
+      <div class="book-content">
+        <h3>El Sendero del Emigrante</h3>
+        <p class="book-intro">Una guía emocional y práctica para aquellos que atraviesan la experiencia de la migración, llena de herramientas y testimonios.</p>
+        <a href="https://www.amazon.com" class="cta">Comprar</a>
+      </div>
+    </div>
+  </div>
 </section>
+
+<style>
+  .books {
+    text-align: center;
+    padding: 0px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .books h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .books p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #555;
+  }
+
+  .books-container {
+    display: flex;
+    gap: 40px;
+  }
+
+  .book-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #fffaf2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+  }
+
+  .book-image {
+    flex: 1;
+  }
+
+  .book-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    max-width: 200px;
+    object-fit: cover;
+  }
+
+  .book-content {
+    flex: 2;
+    text-align: left;
+  }
+
+  .book-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #222;
+  }
+
+  .book-intro {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 15px;
+  }
+
+  .cta {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: 0.3s ease;
+  }
+
+  .cta:hover {
+    background-color: #e65c00;
+  }
+
+  @media (max-width: 600px) {
+    .books-container {
+      flex-direction: column;
+    }
+
+    .book-card {
+      flex-direction: column;
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 20px;
+    }
+
+    .book-image img {
+      max-width: 100%;
+    }
+
+    .book-content {
+      text-align: center;
+    }
+  }
+</style>
