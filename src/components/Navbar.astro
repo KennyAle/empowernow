@@ -1,0 +1,112 @@
+<nav>
+  <h2>EmpowerNow</h2>
+  <ul>
+    <li class="nav-li active"><a href="#">Home</a></li>
+    <li class="nav-li"><a href="#services">Services</a></li>
+    <li class="nav-li"><a href="#process">Process</a></li>
+    <li class="nav-li"><a href="#about">About</a></li>
+    <li class="nav-li"><a href="#books">Books</a></li>
+  </ul>
+  <a href="#" class="header-cta"
+    ><i class="fa-solid fa-phone"></i>Consult with us</a
+  >
+</nav>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  nav {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    max-width: 1200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    background-color: rgba(255, 121, 32, 0.07);
+    padding: 0.6rem 0rem;
+    border-radius: 1.6rem;
+  }
+
+  nav ul li {
+  }
+
+  nav ul li a {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    color: #5e5e5e;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  nav ul li.active a{
+    background-color: #ff6600;
+  }
+
+  nav ul li.active a {
+    color: white;
+  }
+
+  nav ul li.active a:hover {
+    color: white;
+  }
+
+  nav ul li a:hover {
+    color: #ff6600;
+  }
+
+  .header-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff6600;
+    text-decoration: none;
+    color: white;
+    font-size: 0.98rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 102, 0, 0.3);
+  }
+
+  .header-cta:hover {
+    background-color: #e55c00;
+    box-shadow: 0 6px 12px rgba(255, 102, 0, 0.4);
+  }
+
+  nav a i {
+    font-size: 1.2rem;
+  }
+</style>
+
+<script>
+  const navLi = document.querySelectorAll(".nav-li");
+  navLi.forEach(item => {
+    item.addEventListener("click", function () {
+      navLi.forEach(itemLi => {
+        itemLi.classList.remove('active')
+        this.classList.add('active')
+      })
+    });
+  });
+</script>
