@@ -10,6 +10,9 @@
   <a href="#contact" class="header-cta"
     ><i class="fa-solid fa-phone"></i>Agenda tu cita</a
   >
+  <button class="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
+  </button>
 </nav>
 
 <style>
@@ -40,6 +43,7 @@
     background-color: rgba(255, 121, 32, 0.07);
     padding: 0.6rem 0rem;
     border-radius: 1.6rem;
+    position: relative;
   }
 
   nav ul li {
@@ -59,9 +63,6 @@
 
   nav ul li.active a {
     background-color: #ff6600;
-  }
-
-  nav ul li.active a {
     color: white;
   }
 
@@ -98,6 +99,60 @@
   nav a i {
     font-size: 1.2rem;
   }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      border: 0;
+      font-size: 1.6rem;
+    }
+
+    nav ul,
+    .header-cta {
+      display: none;
+    }
+
+    nav ul {
+      position: absolute;
+      display: flex;
+      padding-top: 3rem;
+      /* justify-content: center; */
+      gap: 40px;
+      /* align-items: center; */
+      flex-direction: column;
+      top: 57px;
+      left: 0;
+      padding-left: 15px;
+      background-color: #f3f3f3;
+      border-radius: 0;
+      width: 50%;
+      height: 100vh;
+      translate: -100%;
+      transition: translate 0.4s ease-in-out;
+    }
+
+    nav .show {
+      translate: 0%;
+    }
+
+    nav ul li a {
+      font-size: 1.3rem;
+      display: block;
+    }
+
+    nav ul li.active a {
+      background-color: transparent;
+      color: #5e5e5e;
+    }
+
+    nav ul li.active a:hover {
+      color: #ff6600;
+    }
+  }
 </style>
 
 <script>
@@ -112,4 +167,10 @@
       target.classList.add("active");
     });
   });
+  const respNav = document.querySelector("nav ul") as HTMLUListElement;
+  const respBtn = document.querySelector(".menu-toggle") as HTMLButtonElement;
+  respBtn.addEventListener('click', () => {
+    console.log('asd');
+    respNav.classList.toggle('show')
+  })
 </script>
