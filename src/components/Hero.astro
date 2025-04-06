@@ -47,6 +47,7 @@
     margin-bottom: 1rem;
     line-height: 1.2;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-wrap: balance;
   }
 
   .hero p {
@@ -55,6 +56,7 @@
     max-width: 700px;
     line-height: 1.6;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    text-wrap: pretty;
   }
 
   .hero .cta {
@@ -79,6 +81,10 @@
 
   /* Responsive Design */
   @media (max-width: 768px) {
+    .hero {
+      padding: 0.7rem;
+    }
+
     .hero h1 {
       font-size: 2rem;
     }

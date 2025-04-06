@@ -70,6 +70,7 @@
     line-height: 1.8;
     max-width: 800px;
     margin-bottom: 30px;
+    text-wrap: balance;
   }
 
   .cards {
@@ -130,8 +131,7 @@
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    transition:
-      box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
   }
 
   .about .image-content img:hover {
@@ -140,11 +140,12 @@
 
   @media (max-width: 768px) {
     .about {
-      padding: 30px 20px;
+      padding: 30px 0px;
     }
     .about .container {
       flex-direction: column;
       text-align: center;
+      gap: 30px;
     }
 
     .about .text-content {
@@ -154,6 +155,7 @@
     .cards {
       grid-template-columns: 1fr;
       gap: 20px;
+      padding-inline: 20px;
     }
 
     .card {
@@ -177,10 +179,15 @@
     .about p {
       font-size: 1.1rem;
       padding: 0 20px;
+      text-wrap: pretty;
     }
 
     .about .image-content {
       max-width: 100%;
+    }
+
+    .about .image-content img {
+      border-radius: 0;
     }
   }
 </style>
