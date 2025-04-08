@@ -12,13 +12,29 @@
     <div class="testimony">
       <h3 class="icon"><i class="fa-solid fa-quote-right"></i></h3>
       <div class="testimony-text">
-        <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+        <h3>Luis R. Prado – Presidente de las Compañías Shell en Venezuela</h3>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
-          doloremque vel amet natus nostrum alias sunt, sequi quae minus
-          corporis.
+          El coaching fue una oportunidad para reflexionar sobre mi liderazgo y
+          fortalecerlo ante retos complejos. Fue un “espejo” para enfocarme en
+          lo importante y reafirmar el valor de la comunicación. Ana Andrea
+          Labrador fue una coach humana y muy efectiva. Gracias a esta
+          experiencia, mejoré mi capacidad de liderar en tiempos difíciles.
         </p>
-        <a href="">Read More</a>
+        <a class="leer-mas" href="#">Leer más</a>
+      </div>
+    </div>
+    <div class="testimony">
+      <h3 class="icon"><i class="fa-solid fa-quote-right"></i></h3>
+      <div class="testimony-text">
+        <h3>Jorge Urribarri – Vicepresidente Ejecutivo, Shell Venezuela</h3>
+        <p>
+          El coaching con Ana Andrea Labrador nos ayudó a clarificar misión y
+          visión, reorganizar prioridades y fortalecer el trabajo en equipo.
+          Mejoramos la comunicación en un entorno global y desarrollamos mayor
+          sensibilidad hacia nosotros y nuestros clientes. Muy agradecido por
+          esta experiencia.
+        </p>
+        <a class="leer-mas" href="#">Leer más</a>
       </div>
     </div>
     <div class="testimony">
@@ -30,7 +46,7 @@
           doloremque vel amet natus nostrum alias sunt, sequi quae minus
           corporis.
         </p>
-        <a href="">Read More</a>
+        <a class="leer-mas" href="#">Leer más</a>
       </div>
     </div>
     <div class="testimony">
@@ -42,7 +58,7 @@
           doloremque vel amet natus nostrum alias sunt, sequi quae minus
           corporis.
         </p>
-        <a href="">Read More</a>
+        <a class="leer-mas" href="#">Leer más</a>
       </div>
     </div>
     <div class="testimony">
@@ -54,175 +70,186 @@
           doloremque vel amet natus nostrum alias sunt, sequi quae minus
           corporis.
         </p>
-        <a href="">Read More</a>
-      </div>
-    </div>
-    <div class="testimony">
-      <h3 class="icon"><i class="fa-solid fa-quote-right"></i></h3>
-      <div class="testimony-text">
-        <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
-          doloremque vel amet natus nostrum alias sunt, sequi quae minus
-          corporis.
-        </p>
-        <a href="">Read More</a>
+        <a class="leer-mas" href="#">Leer más</a>
       </div>
     </div>
   </div>
 </section>
 
+<script>
+  const readMoreLinks = document.querySelectorAll(".leer-mas");
+  readMoreLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const paragraph = link.previousElementSibling;
+      if (!paragraph) return;
+      const isExpanded = paragraph.classList.toggle("expand");
+      link.textContent = isExpanded ? "Ocultar" : "Leer más";
+    });
+  });
+</script>
+
 <style>
   .testimonials {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 40px;
-  gap: 1rem;
-  margin: auto;
-}
-
-.testimonials > h2 {
-  max-width: 75%;
-  text-transform: capitalize;
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -1px;
-  text-align: center;
-}
-
-.testimonials > p {
-  margin-bottom: 0.5rem;
-  text-align: center;
-  line-height: 1.5rem;
-  max-width: 65%;
-}
-
-.testimony-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin: auto;
-  justify-content: center;
-}
-
-.testimony {
-  width: 28%;
-  min-width: 28%;
-  max-width: 28%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
-  transition: box-shadow 0.3s ease;
-  box-sizing: border-box; 
-}
-
-.testimony:hover {
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-}
-
-.testimony .icon {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  background-color: rgba(255, 121, 32, 0.09);
-  display: grid;
-  place-content: center;
-  left: -6px;
-  transition: background-color .1s;
-}
-
-.icon i {
-  color: #ff6600;
-  opacity: 0.7;
-  transition: transform 0.2s;
-}
-
-.testimony-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.testimony-text h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #222;
-  position: relative;
-  margin-bottom: 12px;
-}
-
-.testimony-text h3 i {
-  color: #ff6600;
-}
-
-.testimony-text p {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.5;
-  text-wrap: balance;
-}
-
-.testimony-text a {
-  align-self: flex-end;
-  width: 40%;
-  margin-top: 2rem;
-  padding: 0.6rem 0.2rem;
-  background-color: rgba(255, 121, 32, 0.09);
-  text-decoration: none;
-  color: #ff6600;
-  font-weight: 600;
-  font-size: 0.9rem;
-  border-radius: 1rem;
-  text-align: center;
-  transition: color 0.2s ease-out, background-color 0.2s ease-out;
-}
-
-.testimony-text a:hover {
-  background-color: #ff6600;
-  color: white;
-}
-
-.testimony:hover .icon i {
-  transform: translateY(-5px);
-}
-
-.standout {
-  color: #ff6600;
-  font-weight: 600;
-  text-transform: capitalize;
-}
-
-@media (max-width: 768px) {
-  .testimonials {
-    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 1rem;
+    margin: auto;
   }
 
   .testimonials > h2 {
-    max-width: 90%;
+    max-width: 75%;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-align: center;
   }
 
   .testimonials > p {
-    max-width: 90%;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+    max-width: 65%;
   }
 
   .testimony-container {
-    flex-direction: column;
-    align-items: center; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: auto;
+    justify-content: center;
   }
 
   .testimony {
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
+    width: 28%;
+    min-width: 28%;
+    max-width: 28%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
   }
-}
 
+  .testimony:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .testimony .icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgba(255, 121, 32, 0.09);
+    display: grid;
+    place-content: center;
+    left: -6px;
+    transition: background-color 0.1s;
+  }
+
+  .icon i {
+    color: #ff6600;
+    opacity: 0.7;
+    transition: transform 0.2s;
+  }
+
+  .testimony-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .testimony-text h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+    position: relative;
+    margin-bottom: 12px;
+  }
+
+  .testimony-text h3 i {
+    color: #ff6600;
+  }
+
+  .testimony-text p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    text-wrap: balance;
+    height: 150px;
+    min-height: 150px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    interpolate-size: allow-keywords;
+  }
+
+  .testimony-text p.expand {
+    height: auto;
+  }
+
+  .testimony-text a {
+    align-self: flex-end;
+    width: 40%;
+    margin-top: 0.5rem;
+    padding: 0.6rem 0.2rem;
+    background-color: rgba(255, 121, 32, 0.09);
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition:
+      color 0.2s ease-out,
+      background-color 0.2s ease-out;
+  }
+
+  .testimony-text a:hover {
+    background-color: #ff6600;
+    color: white;
+  }
+
+  .testimony:hover .icon i {
+    transform: translateY(-5px);
+  }
+
+  .standout {
+    color: #ff6600;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  @media (max-width: 768px) {
+    .testimonials {
+      padding: 60px 20px;
+    }
+
+    .testimonials > h2 {
+      max-width: 90%;
+    }
+
+    .testimonials > p {
+      max-width: 90%;
+    }
+
+    .testimony-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimony {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
 </style>
