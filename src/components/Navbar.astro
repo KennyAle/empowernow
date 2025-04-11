@@ -119,10 +119,9 @@
       left: 0;
       height: 100vh;
       width: 70%;
-      padding-inline: 20px;
+      padding-inline: 30px;
       flex-direction: column;
-      justify-content: center;
-      gap: 2rem;
+      /* gap: 2rem; */
       background-color: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(6px);
       box-shadow: 6px 0 12px rgba(0, 0, 0, 0.15);
@@ -133,6 +132,10 @@
 
     nav .show {
       transform: translateX(0%);
+    }
+
+    nav ul li {
+      padding-block: 0.8rem;
     }
 
     nav ul li a {
@@ -164,7 +167,6 @@
     item.addEventListener("click", function (event) {
       navLi.forEach((itemLi) => {
         itemLi.classList.remove("active");
-        // this.classList.add("active");
       });
       const target = event.currentTarget as HTMLElement;
       target.classList.add("active");
@@ -173,7 +175,19 @@
   const respNav = document.querySelector("nav ul") as HTMLUListElement;
   const respBtn = document.querySelector(".menu-toggle") as HTMLButtonElement;
   respBtn.addEventListener("click", () => {
-    console.log("asd");
     respNav.classList.toggle("show");
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+
+    const isClickOnToggle = respBtn.contains(target);
+    const isClickOnAllowedItem =
+      target.closest("nav ul li") !== null ||
+      target.closest("nav ul li a") !== null;
+
+    if (!isClickOnToggle && !isClickOnAllowedItem) {
+      respNav.classList.remove("show");
+    }
   });
 </script>
