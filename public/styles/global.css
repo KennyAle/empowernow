@@ -10,6 +10,18 @@ html {
     scroll-behavior: smooth;
 }
 
-p, h1, h2, h3, h4, h5, li {
-    cursor:default;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+    cursor: default;
+}
+
+.standout {
+    color: #ff6600;
+    font-weight: 600;
+    text-transform: capitalize;
 }
