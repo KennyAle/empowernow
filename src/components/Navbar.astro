@@ -5,8 +5,8 @@
     <li class="nav-li"><a href="#about">Nosotros</a></li>
     <li class="nav-li"><a href="#services">Servicios</a></li>
     <li class="nav-li"><a href="#testimonials">Clientes</a></li>
-    <li class="nav-li"><a href="#books">Libros</a></li>
     <li class="nav-li"><a href="#testimonials">Testimonios</a></li>
+    <li class="nav-li"><a href="#books">Libros</a></li>
   </ul>
   <a href="#contact" class="header-cta"
     ><i class="fa-solid fa-phone"></i>Agenda tu cita</a
@@ -41,9 +41,7 @@
   nav ul {
     display: flex;
     list-style: none;
-    background-color: rgba(255, 121, 32, 0.07);
     padding: 0.6rem 0rem;
-    border-radius: 1.6rem;
     position: relative;
   }
 
@@ -55,7 +53,7 @@
     padding: 0.6rem 1.2rem;
     border-radius: 2rem;
     font-weight: 500;
-    color: #5e5e5e;
+    color: #414141;
     cursor: pointer;
     white-space: nowrap;
     text-decoration: none;
@@ -63,7 +61,7 @@
   }
 
   nav ul li.active a {
-    background-color: #ff5e00;
+    background-color: #ff6600;
     color: white;
   }
 
@@ -72,7 +70,7 @@
   }
 
   nav ul li a:hover {
-    color: #ff5e00;
+    color: #ff6600;
   }
 
   .header-cta {
@@ -81,7 +79,7 @@
     align-items: center;
     gap: 0.6rem;
     padding: 0.75rem 1.5rem;
-    background-color: #ff5e00;
+    background-color: #ff6600;
     text-decoration: none;
     color: white;
     font-size: 0.98rem;
@@ -110,48 +108,52 @@
       display: block;
       border: 0;
       font-size: 1.6rem;
-    }
-
-    nav ul,
-    .header-cta {
-      display: none;
+      background: none;
+      z-index: 200;
+      color: #333;
     }
 
     nav ul {
-      position: absolute;
-      display: flex;
-      padding-top: 3rem;
-      /* justify-content: center; */
-      gap: 40px;
-      /* align-items: center; */
-      flex-direction: column;
-      top: 57px;
+      position: fixed;
+      top: 0;
       left: 0;
-      padding-left: 15px;
-      background-color: #f3f3f3;
-      border-radius: 0;
-      width: 50%;
       height: 100vh;
-      translate: -100%;
-      transition: translate 0.4s ease-in-out;
+      width: 70%;
+      padding-inline: 20px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(6px);
+      box-shadow: 6px 0 12px rgba(0, 0, 0, 0.15);
+      transform: translateX(-100%);
+      transition: transform 0.4s ease-in-out;
+      z-index: 150;
     }
 
     nav .show {
-      translate: 0%;
+      transform: translateX(0%);
     }
 
     nav ul li a {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
+      color: #333;
       display: block;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #ff6600;
     }
 
     nav ul li.active a {
-      background-color: transparent;
-      color: #5e5e5e;
+      font-weight: 600;
     }
 
-    nav ul li.active a:hover {
-      color: #ff5e00;
+    .header-cta {
+      display: none;
     }
   }
 </style>
@@ -170,8 +172,8 @@
   });
   const respNav = document.querySelector("nav ul") as HTMLUListElement;
   const respBtn = document.querySelector(".menu-toggle") as HTMLButtonElement;
-  respBtn.addEventListener('click', () => {
-    console.log('asd');
-    respNav.classList.toggle('show')
-  })
+  respBtn.addEventListener("click", () => {
+    console.log("asd");
+    respNav.classList.toggle("show");
+  });
 </script>
