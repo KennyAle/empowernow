@@ -5,7 +5,6 @@
       <p>
         ¿Tienes alguna pregunta o quieres más información? Envíame un mensaje.
       </p>
-
       <form class="contact-form">
         <div class="input-group">
           <label for="name">Nombre:</label>
@@ -17,7 +16,6 @@
             required
           />
         </div>
-
         <div class="input-group">
           <label for="email">Correo Electrónico:</label>
           <input
@@ -28,7 +26,6 @@
             required
           />
         </div>
-
         <div class="input-group">
           <label for="phone">Número Telefónico:</label>
           <input
@@ -39,7 +36,6 @@
             required
           />
         </div>
-
         <div class="input-group">
           <label for="message">Mensaje:</label>
           <textarea
@@ -52,7 +48,6 @@
         <button type="submit" class="cta">Enviar</button>
       </form>
     </div>
-
     <div class="contact-image-container">
       <img
         src="/empowernow/images/image2.webp"
@@ -62,7 +57,40 @@
     </div>
   </div>
 </section>
+<script>
+  import emailjs from "@emailjs/browser";
+  const form = document.querySelector(".contact-form") as HTMLFormElement;
 
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.querySelector("#name") as HTMLInputElement;
+    const email = document.querySelector("#email") as HTMLInputElement;
+    const phone = document.querySelector("#phone") as HTMLTextAreaElement;
+    const message = document.querySelector("#message") as HTMLInputElement;
+    const templateParams = {
+      name: name.value,
+      email: email.value,
+      phone: phone.value,
+      message: message.value,
+    };
+    emailjs
+      .send("contact_service", "contact_form", templateParams, {
+        publicKey: "-ugdS--ZMbgBBOi7L",
+      })
+      .then(
+        () => {
+          alert("¡Mensaje enviado con éxito! Gracias por contactarme.");
+          form.reset();
+        },
+        (err) => {
+          alert(
+            "Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo."
+          );
+          console.log("FAILED...", err);
+        }
+      );
+  });
+</script>
 <style>
   .contact {
     padding: 40px 20px 70px 20px;
