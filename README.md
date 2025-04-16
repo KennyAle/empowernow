@@ -1,48 +1,53 @@
-# Astro Starter Kit: Basics
+# EmpowerNow – Professional Coaching & Organizational Transformation Website
 
-```sh
-npm create astro@latest -- --template basics
-```
+This repository contains the source code for **EmpowerNow**, a consulting brand focused on empowering individuals, leaders, and organizations through transformative coaching and strategic development. The site is built as a professional landing page with responsive design, strong SEO foundations, and a modern, clean interface.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Tech Stack
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Astro](https://astro.build/) – Core Framework
+- HTML5 & CSS3 (vanilla)
+- Font Awesome for icons
+- Responsive design (mobile-first)
+- Basic accessibility and SEO best practices
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🧠 Project Description
 
-## 🚀 Project Structure
+EmpowerNow bridges corporate experience with the transformative power of coaching. The website showcases key services, values, client testimonials, and the profile of its founder, **Ana Andrea Labrador**, a certified professional coach with over 30 years of experience.
 
-Inside of your Astro project, you'll see the following folders and files:
+### Key Features
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- **Services** section: Personal, executive, and corporate coaching
+- **About** section: Mission, vision, and core values
+- **Leader Bio**: Highlights Ana Andrea’s professional background
+- **Contact Form**: Accessible and user-friendly
+- **SEO-optimized** with structured metadata and semantic HTML
+- **Clean, modular** CSS with a consistent brand color palette
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🌟 EmpowerNow Core Values
 
-## 🧞 Commands
+- Strategic Innovation
+- Talent Wellness & Development
+- Impactful Leadership
+- Human Transformation
+- Trust & Transparency
+- Sustainable Results
 
-All commands are run from the root of the project, from a terminal:
+## 📬 Contact
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+A built-in contact form powered by **[EmailJS](https://www.emailjs.com/)** allows potential clients to easily reach out for coaching, workshops, or consultation sessions — without the need for a backend server.
 
-## 👀 Want to learn more?
+## 📈 SEO
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The website includes:
+
+- Proper use of `title`, `description`, and `viewport` meta tags
+- Open Graph metadata for link sharing
+- Accessibility enhancements (`alt` tags, `autocomplete`, semantic HTML)
+
+## 📄 License
+
+This project is the intellectual property of EmpowerNow and is not publicly licensed. For collaborations or usage inquiries, please contact the author.
+
+---
+
+Built with ❤️ to elevate personal and organizational growth.
